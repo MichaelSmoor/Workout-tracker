@@ -58,6 +58,11 @@
             this.cbSpier = new System.Windows.Forms.ComboBox();
             this.tabCompare = new System.Windows.Forms.TabPage();
             this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbArray = new System.Windows.Forms.ListBox();
+            this.btnVoegToe = new System.Windows.Forms.Button();
+            this.txtArray = new System.Windows.Forms.TextBox();
+            this.btnVerwijder = new System.Windows.Forms.Button();
             this.tabTracker.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginAnllela)).BeginInit();
@@ -69,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoWT)).BeginInit();
             this.tabCompare.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabTracker
@@ -76,6 +82,7 @@
             this.tabTracker.Controls.Add(this.tabPage1);
             this.tabTracker.Controls.Add(this.tabWorkout);
             this.tabTracker.Controls.Add(this.tabCompare);
+            this.tabTracker.Controls.Add(this.tabPage2);
             this.tabTracker.Location = new System.Drawing.Point(0, 2);
             this.tabTracker.Name = "tabTracker";
             this.tabTracker.SelectedIndex = 0;
@@ -409,6 +416,56 @@
             this.dgvResults.Size = new System.Drawing.Size(707, 361);
             this.dgvResults.TabIndex = 0;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
+            this.tabPage2.Controls.Add(this.btnVerwijder);
+            this.tabPage2.Controls.Add(this.txtArray);
+            this.tabPage2.Controls.Add(this.btnVoegToe);
+            this.tabPage2.Controls.Add(this.lbArray);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(723, 374);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "Array";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lbArray
+            // 
+            this.lbArray.FormattingEnabled = true;
+            this.lbArray.Location = new System.Drawing.Point(44, 6);
+            this.lbArray.Name = "lbArray";
+            this.lbArray.Size = new System.Drawing.Size(586, 290);
+            this.lbArray.TabIndex = 0;
+            // 
+            // btnVoegToe
+            // 
+            this.btnVoegToe.Location = new System.Drawing.Point(297, 325);
+            this.btnVoegToe.Name = "btnVoegToe";
+            this.btnVoegToe.Size = new System.Drawing.Size(75, 23);
+            this.btnVoegToe.TabIndex = 1;
+            this.btnVoegToe.Text = "Voeg toe";
+            this.btnVoegToe.UseVisualStyleBackColor = true;
+            this.btnVoegToe.Click += new System.EventHandler(this.btnArray_Click);
+            // 
+            // txtArray
+            // 
+            this.txtArray.Location = new System.Drawing.Point(124, 325);
+            this.txtArray.Name = "txtArray";
+            this.txtArray.Size = new System.Drawing.Size(100, 20);
+            this.txtArray.TabIndex = 2;
+            // 
+            // btnVerwijder
+            // 
+            this.btnVerwijder.Location = new System.Drawing.Point(423, 325);
+            this.btnVerwijder.Name = "btnVerwijder";
+            this.btnVerwijder.Size = new System.Drawing.Size(75, 23);
+            this.btnVerwijder.TabIndex = 3;
+            this.btnVerwijder.Text = "Verwijder";
+            this.btnVerwijder.UseVisualStyleBackColor = true;
+            this.btnVerwijder.Click += new System.EventHandler(this.btnVerwijder_Click);
+            // 
             // WorkoutTracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +490,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoWT)).EndInit();
             this.tabCompare.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -468,6 +527,11 @@
         private System.Windows.Forms.Label lblCommentaar;
         private System.Windows.Forms.TextBox txtBoxCommentaar;
         private System.Windows.Forms.DataGridView dgvResults;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ListBox lbArray;
+        private System.Windows.Forms.Button btnVoegToe;
+        private System.Windows.Forms.TextBox txtArray;
+        private System.Windows.Forms.Button btnVerwijder;
     }
 }
 

@@ -22,11 +22,53 @@ namespace Workout_tracker
         Database database = new Database(bestand);
         Materiaal materiaal = new Materiaal();
 
+        //Array (ongebruikt)
+        public string[] array = new string[50];
+
+        public int gevuldTotEnMet = -1;
+
         public WorkoutTracker()
         {
             InitializeComponent();
 
             string pad = Application.StartupPath;
+        }
+
+        //Array methode voor tonen inhoud
+        public void ToonArrayInhoud()
+        {                  
+            lbArray.Items.Clear();
+
+            for (int i = 0; i <= gevuldTotEnMet; i++)
+            {
+                lbArray.Items.Add(array[i]);
+            }           
+        }
+
+        public void verwijderUitArray()
+        {
+            string verwijderWoord = txtArray.Text;
+
+            int controleerPositie = 0;
+
+            while (controleerPositie < 50)
+            {
+                if (array[controleerPositie] == verwijderWoord)
+                {
+                    for (int j = controleerPositie; j < gevuldTotEnMet; j++)
+                    {
+                        array[j] = array[j + 1];
+                    }
+
+                    array[gevuldTotEnMet] = "";
+
+                    gevuldTotEnMet --;
+                }
+                else
+                {
+                    controleerPositie ++;
+                }
+            }
         }
 
         //Methode voor aantonen geselecteerde account in de tweede tab
@@ -82,6 +124,26 @@ namespace Workout_tracker
             }
 
             database.VoegToe(cbOefening.Items[cbOefening.SelectedIndex].ToString(), Convert.ToInt32(nudSets.Value), Convert.ToInt32(nudReps.Value), Convert.ToInt32(nudGewicht.Value), txtBoxCommentaar.Text, persoon);
+        }
+
+        //Button voor toevoegen aan array
+        private void btnArray_Click(object sender, EventArgs e)
+        {
+            string woord = txtArray.Text;
+
+            array[gevuldTotEnMet + 1] = woord;
+
+            gevuldTotEnMet++;
+
+            ToonArrayInhoud();
+        }
+
+        //Button voor verwijderen woord uit array
+        private void btnVerwijder_Click(object sender, EventArgs e)
+        {
+            verwijderUitArray();
+
+            ToonArrayInhoud();
         }
 
         //Ophalen van gegevens uit de database en vergelijken met eerdere resultaten
