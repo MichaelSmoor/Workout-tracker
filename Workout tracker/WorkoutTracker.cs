@@ -136,6 +136,9 @@ namespace Workout_tracker
             gevuldTotEnMet++;
 
             ToonArrayInhoud();
+
+            //Methode van string fucntie
+            stringFunctie();
         }
 
         //Button voor verwijderen woord uit array
@@ -233,6 +236,19 @@ namespace Workout_tracker
 
             lblNaamOefening.Text = cbOefening.SelectedItem.ToString();
             changeImage(); 
+        }
+
+        //String functie stukje
+        //Had er geen doel voor dus dit wordt niet gebruikt
+        public void stringFunctie()
+        {
+            const string s = "Dit is een zin";
+            
+            int i = s.IndexOf('z');
+
+            string d = s.Substring(i);
+
+            lblString.Text = d;
         }
     }
 }

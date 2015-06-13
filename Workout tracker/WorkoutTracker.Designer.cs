@@ -63,6 +63,7 @@
             this.btnVoegToe = new System.Windows.Forms.Button();
             this.txtArray = new System.Windows.Forms.TextBox();
             this.btnVerwijder = new System.Windows.Forms.Button();
+            this.lblString = new System.Windows.Forms.Label();
             this.tabTracker.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginAnllela)).BeginInit();
@@ -419,6 +420,7 @@
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
+            this.tabPage2.Controls.Add(this.lblString);
             this.tabPage2.Controls.Add(this.btnVerwijder);
             this.tabPage2.Controls.Add(this.txtArray);
             this.tabPage2.Controls.Add(this.btnVoegToe);
@@ -465,6 +467,17 @@
             this.btnVerwijder.Text = "Verwijder";
             this.btnVerwijder.UseVisualStyleBackColor = true;
             this.btnVerwijder.Click += new System.EventHandler(this.btnVerwijder_Click);
+            // 
+            // lblString
+            // 
+            this.lblString.AutoSize = true;
+            this.lblString.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblString.ForeColor = System.Drawing.Color.Red;
+            this.lblString.Location = new System.Drawing.Point(656, 334);
+            this.lblString.Name = "lblString";
+            this.lblString.Size = new System.Drawing.Size(60, 24);
+            this.lblString.TabIndex = 4;
+            this.lblString.Text = "label1";
             // 
             // WorkoutTracker
             // 
@@ -532,6 +545,7 @@
         private System.Windows.Forms.Button btnVoegToe;
         private System.Windows.Forms.TextBox txtArray;
         private System.Windows.Forms.Button btnVerwijder;
+        private System.Windows.Forms.Label lblString;
     }
 }
 
